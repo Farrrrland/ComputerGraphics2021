@@ -2,7 +2,7 @@ from AudioAnalyzer import *
 import random
 import colorsys
 
-filename = "Tattoo.mp3"
+filename = "IceCream.mp3"
 
 def rnd_color():
     h, s, l = random.random(), 0.5 + random.random() / 2.0, 0.4 + random.random() / 5.0
