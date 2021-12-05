@@ -1,2 +1,2 @@
 # Ignore files in Music folder
-Music/
+Music/*.mp3
