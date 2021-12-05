@@ -3,3 +3,4 @@ build-essential
 portaudio19-dev
 python-all-dev
 python3-all-dev
+python-gnuradio-audio-portaudio
