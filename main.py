@@ -4,7 +4,7 @@ import colorsys
 
 # Enbale to run in Binder (Container actually)
 import os
-os.environ[“SDL_VIDEODRIVER”] = “dummy”
+os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 filename = "IceCream.mp3"
 
