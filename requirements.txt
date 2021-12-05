@@ -3,3 +3,4 @@ matplotlib
 numba==0.48.0
 librosa==0.6.0
 pydub
+ffprobe
