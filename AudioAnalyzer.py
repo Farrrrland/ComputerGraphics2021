@@ -1,3 +1,6 @@
+import sys
+sys.path.append('/path/to/ffmpeg')
+
 import math
 import os
 import matplotlib.pyplot as plt
