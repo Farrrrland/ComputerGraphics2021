@@ -6,8 +6,19 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 #------------------------------------两条线模式
+
+AUDIO_DIR = "Music" + os.path.sep
+CACHE_DIR = "Cache" + os.path.sep
+IMAGE_DIR = "Image" + os.path.sep
+AUDIO_NAME = "IceCream.wav"
+IMAGE_NAME = "IceCream.gif"
+root = os.getcwd()
+AUDIO_DIR = root + os.path.sep + AUDIO_DIR
+CACHE_DIR = root + os.path.sep + CACHE_DIR
+IMAGE_DIR = root + os.path.sep + IMAGE_DIR
+
 p = pyaudio.PyAudio()
-sound = AudioSegment.from_file(file='Free-Converter.com-a1-86040504.wav')
+sound = AudioSegment.from_file(AUDIO_DIR + AUDIO_NAME)
 left = sound.split_to_mono()[0]
 fs = left.frame_rate
 size = len(left.get_array_of_samples())
@@ -63,4 +74,6 @@ def update(frames):
 
 
 ani = FuncAnimation(fig, update, frames=range(0, size, window), interval=0, blit=True)
+plt.savefig(IMAGE_DIR + IMAGE_NAME)
+make_file_dir(IMAGE_DIR, IMAGE_NAME)
 plt.show()
