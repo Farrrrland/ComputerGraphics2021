@@ -1,4 +1,5 @@
 #coding=utf-8
+import os
 import numpy as np
 import pyaudio
 from pydub import AudioSegment, effects
