@@ -39,10 +39,12 @@ if __name__ == '__main__':
     CACHE_DIR = root + os.path.sep + CACHE_DIR
     IMAGE_DIR = root + os.path.sep + IMAGE_DIR
     
-    print("[INFO]: test dir " + AUDIO_DIR)
+    print("[INFO]: audio dir " + AUDIO_DIR)
+    print("[INFO]: image dir " + IMAGE_DIR)
     music, sr = librosa.load(split_music(0, 1, AUDIO_DIR, CACHE_DIR, AUDIO_NAME))
     # print a 14:5 Graph
     plt.figure(figsize=(14, 5))
     librosa.display.waveplot(music, sr=sr)
+    make_file_dir(IMAGE_DIR, IMAGE_NAME)
     plt.savefig(IMAGE_DIR + IMAGE_NAME)
     plt.show()
