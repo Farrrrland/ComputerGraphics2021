@@ -20,7 +20,7 @@ Currently the repo contains only part one.
 3. Input the commend ` python AudioAnalyzer.py ` and wait for the program to finish
 4. Check the gif file you got in ` ./Image/ ` folder
 
-You'll get .gif files like this:
+You'll get ` .gif ` files like this:
 ![image](https://github.com/Farrrrland/ComputerGraphics2021/blob/main/readme.src/IceCream_README.gif)
 You can also modify the Music files and try with your own ` .wav ` file. P.S. Only ` .wav ` file is valid here!
 
