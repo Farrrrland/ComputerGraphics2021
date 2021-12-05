@@ -9,6 +9,7 @@ The project is divided into 3 parts
 2. Draw something with code
 3. make a Flash vedio
 This repo contains the first 2 of them. You are recommended to use Binder (repo2docker) to run the code, means you won't bother to deal with those environment setting stuffs, and there is no instrutions for you to set up on your own devices. Try it yourself if you'd like to.
+P.S. `./src/ ` folder is for ` README.md `, useless for the program
 
 #### Part 1
 Currently the repo contains only part one.
