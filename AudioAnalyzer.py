@@ -1,6 +1,3 @@
-import sys
-sys.path.append('/path/to/ffmpeg')
-
 import math
 import os
 import matplotlib.pyplot as plt
@@ -16,7 +13,8 @@ AUDIO_NAME = "IceCream.mp3"
 def split_music (begin, end, file_path):
     print("[INFO]: file path is " + file_path)
     # Load the music
-    song = AudioSegment.from_file(file_path, "mp3")
+    song = AudioSegment.from_file(file_path)
+    # print("[INFO]: End of AudioSegment")
     # Get the splitted segment
     song = song[begin * SECOND: end * SECOND]
     # Save as cache
@@ -30,7 +28,7 @@ if __name__ == '__main__':
     CACHE_DIR = root + os.path.sep + CACHE_DIR
     
     print("[INFO]: test dir " + AUDIO_DIR)
-    music, sr = librosa.load(split_music(0, 15, AUDIO_DIR + AUDIO_NAME))
+    music, sr = librosa.load(split_music(0, 1, AUDIO_DIR + AUDIO_NAME))
     # # music, sr = librosa.load(split_music(0, 15, AUDIO_NAME))
     # print a 14:5 Graph
     plt.figure(figsize=(14, 5))
