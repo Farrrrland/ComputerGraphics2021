@@ -43,8 +43,12 @@ if __name__ == '__main__':
     print("[INFO]: image dir " + IMAGE_DIR)
     music, sr = librosa.load(split_music(0, 1, AUDIO_DIR, CACHE_DIR, AUDIO_NAME))
     # print a 14:5 Graph
-    plt.figure(figsize=(14, 5))
-    librosa.display.waveplot(music, sr=sr)
+    n0 = 9000
+    n1 = 10000
+    music = np.array([mic for mic in music if mic > 0])
+    fig = plt.figure(figsize=(14, 5))
+    # librosa.display.waveplot(music, sr=sr)
+    plt.plot(music[n0:n1])
     make_file_dir(IMAGE_DIR, IMAGE_NAME)
     plt.savefig(IMAGE_DIR + IMAGE_NAME)
     plt.show()

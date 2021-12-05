@@ -75,6 +75,6 @@ def update(frames):
 
 
 ani = FuncAnimation(fig, update, frames=range(0, size, window), interval=0, blit=True)
-plt.savefig(IMAGE_DIR + IMAGE_NAME)
 make_file_dir(IMAGE_DIR, IMAGE_NAME)
+ani.save(IMAGE_DIR + IMAGE_NAME, writer="pillow")
 plt.show()
