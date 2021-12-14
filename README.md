@@ -47,6 +47,7 @@ Draw Something
 4. You'll see PeppaPig as soon as it finishes
 
 You'll get the tkinter window like this:
+<img src="https://github.com/Farrrrland/ComputerGraphics2021/blob/main/readme.src/PeppaPig_Turtle.png" width = "60%" />
 ![image-w10](https://github.com/Farrrrland/ComputerGraphics2021/blob/main/readme.src/PeppaPig_Turtle.png)
 ##### Main Code Logic
 1. Use ` turtle ` in Python to draw the picture on canvas
