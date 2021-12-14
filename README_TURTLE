@@ -1,0 +1,52 @@
+Turtle is an HTTP proxy whose purpose is to throttle connections to
+specific hostnames to avoid breaking terms of usage of those API
+providers (like del.icio.us, technorati and so on).
+
+The proxy can be used either as a library embedded in another
+application or it can be started stand-alone using the provided twistd
+plugin.
+
+Here's an example to use turtle from inside another python application:
+
+{{{
+from twisted.internet import reactor
+from turtle import proxy, config
+
+s = """\
+# defaults is pulled out of the end results
+# and used to fill hostnames with missing
+# parameters
+defaults: &defaults
+    # calls that can be made inside the interval of time
+    calls: 1
+
+    # interval is specified in seconds
+    interval: 1
+
+    # the number of concurrent calls that we are allowed to
+    # have running at any given time.
+    concurrency: 10
+
+delicious.com:
+    <<: [*defaults]
+
+www.google.com:
+    calls: 5
+    interval: 1
+
+filter-rest: True
+port: 8080
+"""
+
+urlmap, rest, port = config.loadConfigFromString(s)
+f = proxy.TurtleHTTPFactory(urlmap, rest)
+reactor.listenTCP(port, f)
+reactor.run()
+}}}
+
+And here's an example of a command line to start it stand alone:
+
+{{{
+twistd --logfile=/var/log/turtle.log --pidfile=/var/run/turtle.pid turtle -c /some/path/config.yaml -p turtleOne
+}}}
+
