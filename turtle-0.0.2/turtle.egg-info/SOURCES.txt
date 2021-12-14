@@ -1,6 +1,8 @@
+._MANIFEST.in
 LICENSE
 MANIFEST.in
-README
+PKG-INFO
+README_TURTLE
 setup.cfg
 setup.py
 examples/basic.py
