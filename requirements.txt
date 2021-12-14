@@ -6,4 +6,3 @@ pydub
 pillow
 opencv-python
 opencv-contrib-python
-turtle
