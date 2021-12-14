@@ -9,7 +9,9 @@ The project is divided into 3 parts
 2. Draw something with code
 3. make a Flash vedio
 
-This repo contains the first 2 of them. You are recommended to use Binder (repo2docker) to run the code, means you won't bother to deal with those environment setting stuffs, and there is no instrutions for you to set up on your own devices. Try it yourself if you'd like to.
+This repo contains the first 2 of them. 
+For Project 01, you are recommended to use Binder (repo2docker) to run the code, means you won't bother to deal with those environment setting stuffs, and there is no instrutions for you to set up on your own devices. Try it yourself if you'd like to.
+For Project 02, you should run on your own device cuz there is no dependencies added for using turtle on Juypter Lab, If you want to do so, please modify the code on your own.
 
 P.S. `./src/ ` folder is for ` README.md `, useless for the program
 
@@ -35,3 +37,19 @@ You can also modify the Music files and try with your own ` .wav ` file. P.S. On
 
 More details please refer to the code and I've written detailed comments for one to understand.
 
+#### Part 2
+Draw Something
+
+##### How to start
+1. Clone the code onto your device
+2. Switch to the folder of PJ 2
+3. Use the commend ` python DrawSomething.py ` to start drawing and wait for the program to finish (Turtle is needed for the code to run properly, so search the internet for this package)
+4. You'll see PeppaPig as soon as it finishes
+
+You'll get the tkinter window like this:
+![image](https://github.com/Farrrrland/ComputerGraphics2021/blob/main/readme.src/PeppaPig_Turtle.png)
+
+##### Main Code Logic
+1. Use ` turtle ` in Python to draw the picture on canvas
+3. See the documentations here about ` turtle `: https://docs.python.org/3/library/turtle.html
+2. Follow the comments I made on the code, you can see the process of the drawing rather clearly
